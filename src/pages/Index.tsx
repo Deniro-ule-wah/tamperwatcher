@@ -1,12 +1,20 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from "react";
+import Header from "@/components/Header";
+import DashboardStats from "@/components/DashboardStats";
+import Map from "@/components/Map";
+import RecentIncidents from "@/components/RecentIncidents";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <main className="container mx-auto px-4 py-8">
+        <DashboardStats />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <Map />
+          <RecentIncidents />
+        </div>
+      </main>
     </div>
   );
 };
